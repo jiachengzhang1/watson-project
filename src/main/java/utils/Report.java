@@ -1,6 +1,6 @@
 package utils;
 
-import model.Question;
+import models.Question;
 
 import java.io.BufferedWriter;
 import java.io.File;

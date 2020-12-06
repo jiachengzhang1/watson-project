@@ -1,4 +1,6 @@
-import model.Question;
+package handlers;
+
+import models.Question;
 import utils.Configuration;
 
 import java.io.BufferedReader;

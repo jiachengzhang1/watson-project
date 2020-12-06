@@ -1,5 +1,7 @@
-import model.Question;
-import model.Result;
+import handlers.QuestionHandler;
+import handlers.RerankHandler;
+import models.Question;
+import models.Result;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.store.FSDirectory;
 import utils.Configuration;

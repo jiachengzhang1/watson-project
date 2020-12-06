@@ -1,5 +1,6 @@
-import model.Result;
-import model.WikiPage;
+import handlers.IndexHandler;
+import models.Result;
+import models.WikiPage;
 import utils.Configuration;
 
 import java.io.*;

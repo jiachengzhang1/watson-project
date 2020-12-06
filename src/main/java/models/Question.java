@@ -1,4 +1,4 @@
-package model;
+package models;
 
 import edu.stanford.nlp.simple.Sentence;
 import utils.Configuration;

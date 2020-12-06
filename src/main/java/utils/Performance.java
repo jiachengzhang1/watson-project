@@ -1,14 +1,12 @@
 package utils;
 
-import model.Question;
-import model.RelevanceMap;
-import model.Result;
+import models.Question;
+import models.RelevanceMap;
+import models.Result;
 
 import java.util.*;
 
 public class Performance {
-
-
     public static double reciprocalRank(List<Result> results, Question question) {
         List<RelevanceMap> scales = question.getRelevanceScales(results);
         for (RelevanceMap scale : scales) {

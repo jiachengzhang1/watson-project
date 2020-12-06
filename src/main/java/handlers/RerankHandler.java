@@ -1,6 +1,8 @@
+package handlers;
+
 import edu.stanford.nlp.simple.Document;
 import edu.stanford.nlp.simple.Sentence;
-import model.Result;
+import models.Result;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
 
 import java.util.*;

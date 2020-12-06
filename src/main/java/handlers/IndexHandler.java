@@ -1,6 +1,8 @@
+package handlers;
+
 import edu.stanford.nlp.simple.Sentence;
-import model.Result;
-import model.WikiPage;
+import models.Result;
+import models.WikiPage;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -16,10 +18,8 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.search.similarities.ClassicSimilarity;
 import org.apache.lucene.search.similarities.TFIDFSimilarity;
 import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.BytesRef;
 import utils.Configuration;
 
 import java.io.IOException;
@@ -136,10 +136,6 @@ public class IndexHandler {
         return results;
     }
 
-//    private boolean isTitleInQuery() {
-//
-//    }
-
     private void open(OpenMode mode) {
         IndexWriterConfig config;
         if (this.config.isUseBM25()) {
@@ -182,11 +178,7 @@ public class IndexHandler {
             content = lemmatize(content);
         }
 
-//        System.out.println(title + ": " + content);
-
         doc.add(new StringField("title", title, Field.Store.YES));
-//        doc.add(new TextField("intro", intro, Field.Store.YES));
-//        doc.add(new TextField("content", content, Field.Store.YES));
 
 
         if (config.isPositional()) {
